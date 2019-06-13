@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import "./App.css";
 import NavBar from "./components/navbar";
 import Counters from "./components/counters";
-import { thisExpression } from "@babel/types";
 
 class App extends Component {
   state = {
@@ -13,6 +12,17 @@ class App extends Component {
       { id: 4, value: 0 }
     ]
   };
+
+  constructor() {
+    super();
+    console.log("App - constructor");
+  }
+
+  componentDidMount() {
+    // Make ajax calls to get data
+    // set state
+    console.log("App - componentDidMount");
+  }
 
   handleDelete = counterId => {
     const counters = this.state.counters.filter(c => c.id !== counterId);
@@ -36,6 +46,7 @@ class App extends Component {
   };
 
   render() {
+    console.log("App - rendered");
     return (
       <React.Fragment>
         <NavBar
