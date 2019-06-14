@@ -1,3 +1,11 @@
+## First react app
+
+Made this while following instructions from Mosh... here is the video link
+
+https://www.youtube.com/watch?v=Ke90Tje7VS0&t=1s
+
+Covers the basics of react, explains the concepts graphically.. found it useful
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
