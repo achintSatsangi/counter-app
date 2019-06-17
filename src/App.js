@@ -53,6 +53,15 @@ class App extends Component {
     this.setState({ counters });
   };
 
+  handleAdd = () => {
+    const nextId = Math.max.apply(Math, this.state.counters.map(c => c.id)) + 1;
+    const counters = this.state.counters.concat({
+      id: nextId,
+      value: 0
+    });
+    this.setState({ counters });
+  };
+
   render() {
     console.log("App - rendered");
     return (
@@ -64,6 +73,7 @@ class App extends Component {
           <Counters
             counters={this.state.counters}
             onReset={this.handleReset}
+            onAdd={this.handleAdd}
             onIncrement={this.handleIncrement}
             onDelete={this.handleDelete}
             onDecrement={this.handleDecrement}
